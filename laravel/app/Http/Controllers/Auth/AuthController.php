@@ -7,6 +7,10 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller {
 
+
+ // saluto!
+ 
+ 
 	/*
 	|--------------------------------------------------------------------------
 	| Registration & Login Controller
