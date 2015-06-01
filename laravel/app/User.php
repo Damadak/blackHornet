@@ -10,8 +10,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	use Authenticatable, CanResetPassword;
 
-	//encore un test
-
 	/**
 	 * The database table used by the model.
 	 *
