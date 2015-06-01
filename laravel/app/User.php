@@ -10,8 +10,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	use Authenticatable, CanResetPassword;
 
-	//test IT
-
 	/**
 	 * The database table used by the model.
 	 *
@@ -24,13 +22,49 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['email', 'password'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
 	 */
-	protected $hidden = ['password', 'remember_token'];
+	protected $hidden = ['password'];
+
+        /**
+        * Ignore remember token
+        */
+        public function setAttribute($key, $value)
+        {
+            if ($key != $this->getRememberTokenName()) {
+                parent::setAttribute($key, $value);
+            }
+        }
+
+        public function items()
+        {
+            return $this->hasMany('App\Item');
+        }
+
+        public function roles()
+        {
+            return $this->belongsToMany('App\Role')->withTimestamps();
+        }
+
+        public function hasRole($roleLabel)
+        {
+            $role = $this->roles()->whereLabel($roleLabel)->first();
+            return isset($role);
+        }
+
+        public function hasPermission($permissionLabel)
+        {
+            foreach ($this->roles as $role) {
+                if ($role->hasPermission($permissionLabel)) {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 }
