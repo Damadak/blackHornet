@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class PreferenceMagasin extends Model {
 
-    public function Magasin() {
-        return $this->hasOne('App\Magasin');
+    public function magasin() {
+        return $this->belongsTo('App\Magasin');
     }
 
-    public function Mannequin() {
+    public function mannequin() {
         return $this->belongsTo('App\Mannequin');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//a faire
     }
 
 }

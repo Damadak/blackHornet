@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class DefinitionPartenaire extends Model {
 
-    public function Caracteristique() {
-        return $this->hasMany('App\Caracteristique');
+    public function caracteristique() {
+        return $this->belongsTo('App\Caracteristique');
     }
 
-    public function Partenaire() {
+    public function partenaire() {
         return $this->belongsTo('App\Partenaire');
     }
 
     public static function isValid($data = array()) {
-//à faire
+// faire
     }
 
 }

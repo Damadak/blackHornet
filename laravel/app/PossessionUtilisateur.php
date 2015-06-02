@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class PossessionUtilisateur extends Model {
 
-    public function Utilisateur() {
+    public function utilisateur() {
         return $this->belongsTo('App\Utilisateur');
     }
 
-    public function Role() {
-        return $this->hasOne('App\Role');
+    public function role() {
+        return $this->belongsTo('App\Role');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//a faire
     }
 
 }

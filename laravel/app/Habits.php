@@ -6,24 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Habits extends Model {
 
-    public function Definition() {
-        return $this->hasOne('App\Definition');
+    public function definitions() {
+        return $this->hasMany('App\Definition');
     }
 
-    public function Rangement() {
-        return $this->belongsToMany('App\Rangement');
+    public function rangements() {
+        return $this->hasMany('App\Rangement');
     }
 
-    public function Habillement() {
-        return $this->belongsToMany('App\Habillement');
+    public function habillements() {
+        return $this->hasMany('App\Habillement');
     }
 
-    public function Marque() {
+    public function marque() {
         return $this->belongsTo('App\Marque');
     }
 
     public static function isValid($data = array()) {
-//à faire
+// faire
     }
 
 }

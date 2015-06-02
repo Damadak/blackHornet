@@ -6,32 +6,28 @@ use Illuminate\Database\Eloquent\Model;
 
 class SessionVote extends Model {
 
-    public function Prix() {
+    public function prixs() {
         return $this->hasMany('App\Prix');
     }
 
-    public function Image() {
-        return $this->hasMany('App\Image');
-    }
-
-    public function Vote() {
+    public function votes() {
         return $this->hasMany('App\Vote');
     }
 
-    public function Partcipation() {
+    public function partcipations() {
         return $this->hasMany('App\Participation');
     }
 
-    public function Mannequin() {
+    public function mannequinGagne() {
         return $this->hasOne('App\Mannequin');
     }
 
-    public function Representation() {
+    public function representations() {
         return $this->hasMany('App\Representation');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//a faire
     }
 
 }

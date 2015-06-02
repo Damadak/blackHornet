@@ -1,8 +1,27 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Personne extends Model {
+
+    public function utilisateur() {
+        return $this->belongsTo('App\Permission');
+    }
+
+    public function gardeRobes() {
+        return $this->hasMany('App\GardeRobe');
+    }
+    
+        public function votes() {
+        return $this->hasMany('App\Vote');
+    }
+
+    public static function isValid($data = array()) {
+//a faire
+    }
+
+}
 

@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vote extends Model {
 
-    public function SessionVote() {
-        return $this->hasOne('App\SessionVote');
+    public function sessionVotes() {
+        return $this->belongsTo('App\SessionVote');
     }
 
-    public function Personne() {
+    public function personne() {
         return $this->belongsTo('App\Personne');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//a faire
     }
 
 }

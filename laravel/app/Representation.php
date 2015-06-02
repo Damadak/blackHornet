@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Representation extends Model {
 
-    public function DefinitionPartenaire() {
+    public function sessionVote() {
         return $this->belongsTo('App\SessionVote');
     }
 
-    public function Image() {
-        return $this->hasOne('App\Image');
+    public function image() {
+        return $this->belongsTo('App\Image');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//a faire
     }
 
 }

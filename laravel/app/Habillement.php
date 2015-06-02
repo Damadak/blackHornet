@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Habillement extends Model {
 
-    public function Habits() {
-        return $this->hasMany('App\Habits');
+    public function habit() {
+        return $this->belongsTo('App\Habits');
     }
 
-    public function Mannequin() {
+    public function mannequin() {
         return $this->belongsTo('App\Mannequin');
     }
 
     public static function isValid($data = array()) {
-//à faire
+// faire
     }
 
 }

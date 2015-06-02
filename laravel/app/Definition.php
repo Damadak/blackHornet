@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Definition extends Model {
 
-    public function Caracteristique() {
-        return $this->belongsToMany('App\Caracteristique');
+    public function caracteristique() {
+        return $this->belongsTo('App\Caracteristique');
     }
 
-    public function Habits() {
+    public function habit() {
         return $this->belongsTo('App\Habits');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//faire
     }
 
 }

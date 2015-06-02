@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class PreferenceMarque extends Model {
 
-    public function Marque() {
-        return $this->hasOne('App\Marque');
+    public function marque() {
+        return $this->belongsTo('App\Marque');
     }
 
-    public function Mannequin() {
+    public function mannequin() {
         return $this->belongsTo('App\Mannequin');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//a faire
     }
 
 }

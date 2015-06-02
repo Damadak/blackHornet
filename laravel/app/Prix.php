@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Prix extends Model {
 
-    public function Partenaire() {
+    public function partenaire() {
         return $this->belongsTo('App\Partenaire');
     }
 
-    public function SessionVote() {
+    public function sessionVote() {
         return $this->belongsTo('App\SessionVote');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//ï¿½ faire
     }
 
 }

@@ -5,9 +5,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Permission extends Model {
 
-    public function PossessionRole()
+    public function possessionRole()
     {
-        return $this->belongsTo('App\Role')->withTimestamps();
+        return $this->hasMany('App\PossessionRole')->withTimestamps();
     }
 
 }

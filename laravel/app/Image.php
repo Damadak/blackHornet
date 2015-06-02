@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model {
 
-    public function Representation() {
-        return $this->belongsTo('App\Representation');
+    public function representations() {
+        return $this->hasMany('App\Representation');
     }
 
-    public function Shooting() {
+    public function shooting() {
         return $this->belongsTo('App\Shooting');
     }
 
     public static function isValid($data = array()) {
-//à faire
+// faire
     }
 
 }

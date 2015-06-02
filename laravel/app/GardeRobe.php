@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class GardeRobe extends Model {
 
-    public function Rangement() {
-        return $this->hasOne('App\Rangement');
+    public function rangements() {
+        return $this->hasMany('App\Rangement');
     }
 
-    public function Personne() {
+    public function personne() {
         return $this->belongsTo('App\Personne');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//faire
     }
 
 }

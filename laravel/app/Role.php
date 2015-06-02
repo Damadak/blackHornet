@@ -5,12 +5,12 @@ use Validator;
 
 class Role extends Model {
 
-    public function PossessionUtilisateur()
+    public function possessionUtilisateurs()
     {
-        return $this->belongsToMany('App\PossessionUtilisateur')->withTimestamps();
+        return $this->hasMany('App\PossessionUtilisateur')->withTimestamps();
     }
 
-    public function PossessionRole()
+    public function possessionRoles()
     {
         return $this->hasMany('App\PossessionRole')->withTimestamps();
     }

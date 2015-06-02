@@ -17,6 +17,8 @@ class CreateHabitsTable extends Migration {
 			$table->increments('id');
                         $table->string('référence');
                         $table->string('type');
+                        $table->string('marque_id')->unsigned();
+                        $table->foreign('marque_id')->references('id')->on('marques');
 			$table->timestamps();
 		});
 	}

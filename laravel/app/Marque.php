@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Marque extends Model {
 
-    public function Habits() {
-        return $this->hasMany('App\Habits');
+    public function habits() {
+        return $this->belongsToMany('App\Habits');
     }
 
-    public function Mannequin() {
-        return $this->belongsToMany('App\Mannequin');
+    public function preferenceMarques() {
+        return $this->hasMany('App\PreferenceMarque');
     }
 
     public static function isValid($data = array()) {
-//à faire
+//a faire
     }
 
 }
