@@ -15,7 +15,7 @@ class Caracteristique extends Model {
     }
 
     public static function isValid($data = array()) {
-//� faire
+//� faire
     }
-
+//YöHééééé ttttt^¨¨¨e¨¨ë¨¨¨¨¨ssss!!!!!´´´´´´´´´~~~~~~~
 }
