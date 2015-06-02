@@ -18,4 +18,5 @@ class Caracteristique extends Model {
 //� faire
     }
 //YöHééééé ttttt^¨¨¨e¨¨ë¨¨¨¨¨ssss!!!!!´´´´´´´´´~~~~~~~
+    //àéèàéè$$
 }
