@@ -15,11 +15,12 @@ class CreateHabitsTable extends Migration {
 		Schema::create('habits', function(Blueprint $table)
 		{
 			$table->increments('id');
-                        $table->string('référence');
+                        $table->timestamps();
+                        $table->string('reference');
                         $table->string('type');
                         $table->string('marque_id')->unsigned();
                         $table->foreign('marque_id')->references('id')->on('marques');
-			$table->timestamps();
+			
 		});
 	}
 
