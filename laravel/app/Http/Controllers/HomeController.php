@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-class HomePageController extends Controller {
+class HomeController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------

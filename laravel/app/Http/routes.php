@@ -13,6 +13,8 @@
 
 Route::get('/', 'WelcomeController@index');
 
+Route::get('home', 'HomeController@index');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
@@ -55,7 +57,7 @@ Route::group(['middleware' => 'auth'], function() {
     /*
      * Home page, affichage différent si pas co
      */
-    Route::get('homePage', 'HomePageController@Index');
+    Route::resource('homePage', 'homePageController');
         /*
      * Gestion session de votes
      */
