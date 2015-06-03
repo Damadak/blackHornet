@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Personne extends Model {
 
     public function utilisateur() {
-        return $this->belongsTo('App\Permission');
+        return $this->belongsTo('App\Utilisateur');
     }
 
     public function gardeRobes() {

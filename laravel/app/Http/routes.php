@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('utilisateur','UtilisateurController');
     Route::resource('personne', 'PersonneController');
     Route::resource('profile','ProfileController');
+    Route::resource('mannequin','MannequinController');
     
     /*
      * ACL
@@ -53,11 +54,11 @@ Route::group(['middleware' => 'auth'], function() {
     /*
      * Gestion des mannequins (pour affichage différent si pas co
      */
-    Route::resource('mannequin', 'MannequinController');
+    Route::get('createMannequin', 'mannequinController@create');
     /*
      * Home page, affichage différent si pas co
      */
-    Route::resource('homePage', 'homePageController');
+    Route::resource('homePage', 'homePageController@index');
         /*
      * Gestion session de votes
      */
